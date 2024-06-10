@@ -1,46 +1,59 @@
-
 /**
  * Utiliser la fonction .map sur le tableau passé en paramètre
  * pour retourner un nouveau tableau avec les valeurs multipliées par 2
- * 
- * contraintes: 
+ *
+ * contraintes:
  *   - Les mots clées for, while, do while sont interdits
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable
- * 
-  */
+ *
+ */
 
-const multiplyByTwo = (array) => {}
-
+const multiplyByTwo = (array) => {
+  new_tab = array.map((el) => {
+    return el * 2;
+  });
+  return new_tab;
+};
 
 /**
  * Utiliser la fonction .filter sur le tableau passé en paramètre
  * retourne un nouveau tableau avec uniquement les nom qui commencent par la lettre "A"
- * 
- * contraintes: 
+ *
+ * contraintes:
  *   - Les mots clées for, while, do while sont interdits
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
-  */
+ */
 
-const filterNameStartByA = (array) => {}
+const filterNameStartByA = (array) => {
+  const value = array.filter((el) => {
+    return el == "A";
+  });
+  return value;
+};
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
  * retourne la somme des valeurs du tableau
- * 
- * contraintes: 
+ *
+ * contraintes:
  *   - Les mots clées for, while, do while sont interdits
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
-  */
+ */
 
-const sum = (array) => {}
+const sum = (array) => {
+  somme = array.reduce((acc, curr_value) => {
+    return (acc += curr_value);
+  }, 0);
+  return somme;
+};
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
  * retourne l'utilisateur qui a l'id passé en 2e paramètre
- * 
+ *
  * exemple d'entrée:
  * [
  *  {id: 1, name: 'John'},
@@ -49,14 +62,18 @@ const sum = (array) => {}
  *  {id: 4, name: 'Bar'},
  * ], 3
  * retour attendu: "Foo"
- * 
- * contraintes: 
+ *
+ * contraintes:
  *   - Les mots clées for, while, do while sont interdits
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
-  */
+ */
 
-const findUserById = (array, id) => {}
+const findUserById = (array, id) => {
+  user = array.find((user) => {
+    return user.id === id;
+  });
+  return user[0].name;
+};
 
-
-module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
+module.exports = { multiplyByTwo, filterNameStartByA, sum, findUserById };
