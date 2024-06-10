@@ -9,7 +9,7 @@
  */
 
 const concat = (arr1, arr2) => {
-  return arr1 + arr2;
+  return [arr1, ...arr2];
 };
 
 /**
@@ -21,7 +21,9 @@ const concat = (arr1, arr2) => {
  * - ne pas utiliser la méthode push
  */
 
-const push = (arr, item) => {};
+const push = (arr, item) => {
+  return (arr[arr.length] = item);
+};
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
